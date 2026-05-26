@@ -1,261 +1,129 @@
-/* -----------------------------
-   IMPORT BASE YORHA
------------------------------- */
 
-@import url("https://raw.githubusercontent.com/metakirby5/yorha/master/dist/yorha.css");
-
-/* -----------------------------
-   ROOT COLORS
------------------------------- */
-
-:root {
-    --yorha-bg: #d7d2c4;
-    --yorha-panel: #c8c2b0;
-    --yorha-dark: #3a3832;
-    --yorha-text: #222;
-    --yorha-accent: #4a463d;
-    --yorha-border: #5f5b51;
+:root{
+  --bg:#d7d2c4;
+  --panel:#c8c2b0;
+  --panel2:#b8b19f;
+  --border:#5f5b51;
+  --text:#222;
+  --accent:#3a3832;
 }
-
-/* -----------------------------
-   GLOBAL
------------------------------- */
 
 html,
-body {
-    background: var(--yorha-bg) !important;
-    color: var(--yorha-text) !important;
-    font-family: "Segoe UI", sans-serif !important;
+body{
+  background:var(--bg)!important;
+  color:var(--text)!important;
+  font-family:Verdana,sans-serif!important;
 }
 
-/* remove weird gradients/images */
-body * {
-    text-shadow: none !important;
-    box-shadow: none !important;
+/* remove default site junk */
+body *{
+  text-shadow:none!important;
+  box-shadow:none!important;
 }
 
-/* -----------------------------
-   HEADER / NAVBAR
------------------------------- */
-
-#header,
-#menu,
-#userinfo,
-#nav,
-.header,
-.navbar {
-    background: var(--yorha-panel) !important;
-    border-bottom: 2px solid var(--yorha-border) !important;
-}
-
-#menu a,
-#userinfo a,
-#nav a {
-    color: var(--yorha-dark) !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-
-#menu a:hover,
-#userinfo a:hover,
-#nav a:hover {
-    background: rgba(0,0,0,0.08) !important;
-}
-
-/* -----------------------------
-   MAIN CONTAINERS
------------------------------- */
-
+/* main layout */
 #wrapper,
 #content,
-.main_column,
-.sidebar,
-.box,
-.panel,
-.forum_post,
-.news_post,
-.torrent_table,
-table {
-    background: rgba(255,255,255,0.15) !important;
-    border: 1px solid var(--yorha-border) !important;
-    color: var(--yorha-text) !important;
+#outer{
+  background:transparent!important;
 }
 
-/* -----------------------------
-   TABLES (IMPORTANT FOR JPOPSUKI)
------------------------------- */
-
-table {
-    border-collapse: collapse !important;
-    width: 100%;
+/* top bar */
+#header,
+#menu,
+#userinfo{
+  background:var(--panel)!important;
+  border-bottom:2px solid var(--border)!important;
 }
 
-tr {
-    background: transparent !important;
+/* links */
+a{
+  color:var(--accent)!important;
 }
 
-tr:nth-child(even) {
-    background: rgba(0,0,0,0.03) !important;
+a:hover{
+  color:black!important;
+}
+
+/* tables */
+table{
+  width:100%!important;
+  border-collapse:collapse!important;
+  background:rgba(255,255,255,.15)!important;
+}
+
+tr:nth-child(even){
+  background:rgba(0,0,0,.03)!important;
 }
 
 td,
-th {
-    border: 1px solid rgba(0,0,0,0.15) !important;
-    padding: 6px 8px !important;
-    color: var(--yorha-text) !important;
+th{
+  border:1px solid rgba(0,0,0,.15)!important;
+  padding:6px!important;
+  color:var(--text)!important;
 }
 
-th {
-    background: var(--yorha-panel) !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+th{
+  background:var(--panel)!important;
+  text-transform:uppercase;
 }
 
-/* -----------------------------
-   LINKS
------------------------------- */
-
-a {
-    color: var(--yorha-accent) !important;
-    transition: 0.15s ease;
+/* boxes */
+.box,
+.sidebar .box,
+.main_column .box{
+  background:rgba(255,255,255,.15)!important;
+  border:1px solid var(--border)!important;
+  margin-bottom:10px!important;
 }
 
-a:hover {
-    color: #000 !important;
-    background: rgba(0,0,0,0.05);
+.head{
+  background:var(--panel)!important;
+  border-bottom:1px solid var(--border)!important;
+  padding:8px!important;
+  font-weight:bold!important;
+  text-transform:uppercase!important;
 }
 
-/* -----------------------------
-   SIDEBAR BOXES
------------------------------- */
-
-.sidebar .box {
-    margin-bottom: 12px !important;
-}
-
-.sidebar .head,
-.box .head,
-.panel .head {
-    background: var(--yorha-panel) !important;
-    border-bottom: 1px solid var(--yorha-border) !important;
-    color: var(--yorha-dark) !important;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* -----------------------------
-   INPUTS
------------------------------- */
-
+/* inputs */
 input,
 textarea,
 select,
-button {
-    background: #e8e3d3 !important;
-    color: #222 !important;
-    border: 1px solid var(--yorha-border) !important;
-    border-radius: 0 !important;
+button{
+  background:#e8e3d3!important;
+  border:1px solid var(--border)!important;
+  color:#222!important;
 }
 
-button,
-input[type="submit"] {
-    background: var(--yorha-panel) !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* forum posts */
+.forum_post{
+  background:rgba(255,255,255,.1)!important;
+  border:1px solid var(--border)!important;
 }
 
-button:hover,
-input[type="submit"]:hover {
-    background: #b7b09c !important;
+/* torrent table */
+.torrent_table{
+  background:rgba(255,255,255,.1)!important;
 }
-
-/* -----------------------------
-   FORUM POSTS
------------------------------- */
-
-.forum_post {
-    padding: 10px !important;
-}
-
-blockquote {
-    background: rgba(0,0,0,0.04) !important;
-    border-left: 3px solid var(--yorha-border) !important;
-    padding: 10px !important;
-}
-
-/* -----------------------------
-   TORRENT TABLE FIXES
------------------------------- */
 
 .torrent_table tr.group,
-.torrent_table tr.group_torrent {
-    background: transparent !important;
+.torrent_table tr.group_torrent{
+  background:transparent!important;
 }
 
-.torrent_table td {
-    vertical-align: middle !important;
+/* images */
+img{
+  filter:grayscale(.15);
 }
 
-/* -----------------------------
-   IMAGES
------------------------------- */
-
-img {
-    filter: grayscale(15%) contrast(95%);
+.avatar img{
+  filter:none!important;
 }
 
-/* avatars remain clean */
-.avatar img {
-    filter: none !important;
-}
-
-/* -----------------------------
-   SCROLLBAR
------------------------------- */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--yorha-bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--yorha-border);
-}
-
-/* -----------------------------
-   REMOVE BROKEN YORHA EFFECTS
------------------------------- */
-
+/* remove problematic effects */
 canvas,
-video,
-.yorha-overlay,
 .scanline,
-.scanlines {
-    display: none !important;
-}
-
-/* -----------------------------
-   MOBILE FIXES
------------------------------- */
-
-@media (max-width: 900px) {
-
-    body {
-        font-size: 14px !important;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    #content,
-    #wrapper {
-        width: 100% !important;
-    }
+.scanlines,
+video{
+  display:none!important;
 }
