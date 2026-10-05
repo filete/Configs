@@ -1,0 +1,27 @@
+[general]
+import = [
+  #	 "C:/Mods/Windows/alacritty/themes/carbonfox.toml"
+  #  	"C:/Mods/Windows/alacritty/themes/monokai_pro.toml"
+  # 	"C:/Mods/Windows/alacritty/themes/github-dark-colorblind.toml"
+  #  	"C:/Mods/Windows/alacritty/themes/github_dark.toml"
+     	"C:/Mods/Windows/alacritty/themes/rasmus.toml"
+]
+
+[window]
+decorations = "Full"#"None"
+
+[window.padding]
+x = 15
+y = 15
+
+[font.normal]
+family = "Iosevka NF"
+style = "Regular"
+[font.italic]
+family = "Iosevka NF"
+style = "Oblique"
+
+#[cursor]
+#shape = "Block"
+#blinking = "On"
+
